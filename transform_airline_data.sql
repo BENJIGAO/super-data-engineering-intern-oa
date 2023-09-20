@@ -17,7 +17,7 @@ CREATE TABLE airline_data AS
 
     -- requirement #1: flight codes with null values are replaced with the correct codes that are +10 of the previous code
     WITH flight_codes_adjusted AS (
-  		  SELECT
+        SELECT
             "Airline Code",
             "DelayTimes",
             CAST(COALESCE("FlightCodes", LAG("FlightCodes") OVER () + 10) AS INTEGER) AS "FlightCodes",
