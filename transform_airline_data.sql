@@ -15,7 +15,7 @@ Assumptions:
 -- `airline_data` is the new table that contains the transformed data
 CREATE TABLE airline_data AS
 
-	-- requirement #1: flight codes with null values are replaced with the correct codes that are +10 of the previous code
+    -- requirement #1: flight codes with null values are replaced with the correct codes that are +10 of the previous code
     WITH flight_codes_adjusted AS (
   		  SELECT
             "Airline Code",
